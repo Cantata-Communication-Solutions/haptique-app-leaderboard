@@ -1,0 +1,9 @@
+# CODEOWNERS
+# Place this file in the root of your repo: /.github/CODEOWNERS or /CODEOWNERS
+
+# Protect the leaderboard and submissions files
+/Leaderboard.md   @Cantata-Communication-Solutions/haptique-team
+/Submissions.md   @Cantata-Communication-Solutions/haptique-team
+
+# (Optional) Protect the whole repo so only your team reviews/approves
+*                @Cantata-Communication-Solutions/haptique-team
