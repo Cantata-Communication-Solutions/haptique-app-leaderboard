@@ -1,0 +1,99 @@
+name: "RS90 App Submission"
+description: "Submit your open-source Android app for the Haptique RS90 challenge"
+title: "[Submission] <App Name> by <Team/Developer>"
+labels: ["submission", "needs-review"]
+assignees:
+  - willisdesai
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for participating! Please fill out all required fields.  
+        **RS90 specs**: Android 12, 3GB RAM, MediaTek 6765, dual-band Wi-Fi, Bluetooth 5.1, IR blaster.
+
+  - type: input
+    id: app_name
+    attributes:
+      label: App Name
+      placeholder: "e.g., RS90 Home Assistant"
+    validations:
+      required: true
+
+  - type: input
+    id: team
+    attributes:
+      label: Developer/Team
+      placeholder: "@github-handle or team name"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short Description
+      description: What does the app do? What hardware features (buttons/IR/Wi-Fi/BT) does it use?
+      placeholder: "1–3 sentences"
+    validations:
+      required: true
+
+  - type: input
+    id: repo
+    attributes:
+      label: Repo Link (Open Source)
+      description: Must include a LICENSE file (MIT/Apache-2.0 recommended)
+      placeholder: "https://github.com/yourname/yourapp"
+    validations:
+      required: true
+
+  - type: textarea
+    id: build_run
+    attributes:
+      label: Build & Run Notes
+      description: How to build and install on RS90 (Android 12). Mention any permissions or special steps.
+      placeholder: "Gradle task, minSdk, known issues, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: demo
+    attributes:
+      label: Screenshots / Demo (optional)
+      description: Paste image links or a short video link (GitHub asset, Loom, Drive with public link)
+      placeholder: "https://user-images.githubusercontent.com/...  |  https://youtu.be/..."
+
+  - type: checkboxes
+    id: hardware
+    attributes:
+      label: Hardware Used (check all that apply)
+      options:
+        - label: Physical buttons
+        - label: IR blaster
+        - label: Wi-Fi
+        - label: Bluetooth 5.1
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Prototype (boots + basic flow)
+        - Functional (core features working)
+        - Polished (UX & edge cases handled)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: "Code is open-source and includes a LICENSE file."
+          required: true
+        - label: "Runs on Android 12 (RS90)."
+          required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes for Reviewers (optional)
+      placeholder: "Anything we should know while testing/scoring."
